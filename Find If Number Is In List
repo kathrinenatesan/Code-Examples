@@ -1,0 +1,14 @@
+nums = [5, 10, 15, 25, 8]
+# goal is to find 15 in list
+found = False
+i = 0
+
+while not found and i < len(nums):
+    if nums[i] == 15:
+        found = True
+    i += 1
+
+if found:
+    print("Number found")
+else:
+    print("Number not in list")
