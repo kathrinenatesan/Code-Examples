@@ -1,0 +1,38 @@
+def list_menu():
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("9. QUIT")
+    var_menu = input("Enter your choice: ")
+    return var_menu
+
+def computation(menu):
+    num1 = int(input("Enter number 1 : \n"))
+    num2 = int(input("Enter number 2 : \n"))
+
+    if menu == "1":
+        value = num1 + num2
+        print("The answer is : " + str(value))
+    elif menu == "2":
+        value = num1 - num2
+        print("The answer is : " + str(value))
+    elif menu == "3":
+        value = num1 * num2
+        print("The answer is : " + str(value))
+    elif menu == "4":
+        if num2 == 0:
+            print("Error: Division by zero")
+        else:
+            value = num1 / num2
+            print("The answer is: " + str(value))
+    elif menu == "9":
+        exit()
+    else:
+        print("Invalid choice")
+
+option_menu = list_menu()
+
+while option_menu != "9":
+    computation(option_menu)
+    option_menu = list_menu()
