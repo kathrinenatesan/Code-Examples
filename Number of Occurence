@@ -1,0 +1,7 @@
+nums = [5, 10, 15, 8, 10, 18]
+# find number of occurence of 10
+occurence = 0
+for num in nums:
+  if num == 10:
+    occurence = occurence + 1
+print(occurence)
